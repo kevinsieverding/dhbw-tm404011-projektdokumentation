@@ -14,7 +14,7 @@ jobs:
       - name: compile document
         uses: xu-cheng/latex-action@v2
         with:
-          root_file: main.tex
+          root_file: index.tex
 
       - name: create release
         id: create-release
