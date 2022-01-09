@@ -134,7 +134,7 @@ Dieser Teil schließt mit einer Beschreibung der Test-Routine, welche ich einges
 
 \subsection{Features}
 
-Die folgende Tabelle gibt einen Überblick der Features, welche die App dem Nutzer bietet:
+Tabelle \ref{tab:features} gibt einen Überblick der Features, welche die App dem Nutzer bietet.
 
 \begin{table}[ht]
   \begin{tabu}{| >{\ttfamily} r | X |}
@@ -150,7 +150,7 @@ Die folgende Tabelle gibt einen Überblick der Features, welche die App dem Nutz
     F5 & Als ein Spieler möchte ich eine Rangliste mit den Höchstpunktzahlen von mir und anderen Spielern ansehen können.\\
     \hline
   \end{tabu}
-  \caption{Features der 1 x 1 Mobile-App}
+  \caption{Features der 1 x 1 Mobile-App}\label{tab:features}
 \end{table}
 
 \texttt{F1} stellt den Kern der App und dieses Projekt dar.
@@ -249,36 +249,40 @@ Da die Ordnerstruktur in \emph{flutter}'s Programmiersprache \emph{Dart} ebenfal
 
 Aufgrund des geringen Umfang und begrenzten Zeitraumes des Projekts habe ich mich dagegen entschieden klassische Unit Tests für die einzelnen Komponenten der App zu schreiben.
 Stattdessen habe ich für jedes Feature eine einfache Testroutine definiert, welche ich manuell durchgehen konnte um die korrekte Funktionsweise des Features sicherzustellen.
+Tabelle \ref{tab:test-routines} zeigt eine Aufstellung dieser Testroutinen.
 
-\begin{longtabu}{| >{\ttfamily} r | X |}
-  \hline
-  F1.1 & Bei uninitialisierter App. Wenn ich als Spieler die App öffne wird mir kurz die \texttt{SplashPage} angezeigt und dann werden ich zur \texttt{LandingPage} navigiert. \\
-  \hline
-  F1.2 & Wenn ich als Spieler auf der \texttt{LandingPage} meinen Namen eingebe und die Eingabe bestätige, dann werden ich auf die \texttt{HomePage} navigiert. \\
-  \hline
-  F1.3 & Bei initialisierter App. Wenn ich als Spieler die App öffne wird mir kurz die \texttt{SplashPage} angezeigt und dann werden ich zur \texttt{HomePage} navigiert. \\
-  \hline
-  F1.4 & Wenn ich als Spieler auf der \texttt{HomePage} den \enquote{Spielen!}-Knopf drücke, werde ich zur \texttt{GamePage} navigiert.\\
-  \hline
-  F1.5 & Ich als Spieler kann auf der \texttt{GamePage} Karten mit Gleichungen nach rechts oder links wischen und sie verschwinden.\\
-  \hline
-  F2.1 & Wenn ich als Spielerin eine korrekte Gleichung nach rechts wische, erhalte ich das Ergebnis der Gleichung zu meiner Punktezahl hinzu.\\
-  \hline
-  F2.2 & Wenn ich als Spielerin eine inkorrekte Gleichung nach links wische, erhalte ich das Produkt der Operanden zu meiner Punktezahl hinzu.\\
-  \hline
-  F3.1 & Wenn ich als Spieler eine korrekte Gleichung nach links wische oder eine inkorrekte Gleichung nach rechts wische, erlischt eines meiner Herzen.\\
-  \hline
-  F3.2 & Wenn ich als Spieler keine Herzen mehr habe, werde ich zur \texttt{GameOverPage} navigiert.\\
-  \hline
-  F3.3 & Wenn ich als Spieler auf der \texttt{GameOverPage} auf den \enquote{Zurück}-Knopf drücke, werde ich zur \texttt{HomePage} navigiert.\\
-  \hline
-  F3.4 & Wenn ich als Spieler auf der \texttt{GameOverPage} auf den \enquote{Nochmal}-Knopf drücke, werde ich auf die \texttt{GamePage} navigiert. Die \texttt{GamePage} ist im initialen Zustand.\\
-  \hline
-  F4.1 & Mir als Spielerin wird auf der \texttt{HomePage} meine höchste erreichte Punktzahl angezeigt.\\
-  \hline
-  F5.1 & Wenn ich als Spieler auf den \enquote{Punkte}-Knopf drücke, werde ich zur \texttt{HighscoreView} navigiert. Die \texttt{HighscoreView} zeigt alle meine vergangenen Punktestände in absteigender Reihenfolge zusammen mit meinem Namen an.\\
-  \hline
-\end{longtabu}
+\begin{table}
+  \begin{longtabu}{| >{\ttfamily} r | X |}
+    \hline
+    F1.1 & Bei uninitialisierter App. Wenn ich als Spieler die App öffne wird mir kurz die \texttt{SplashPage} angezeigt und dann werden ich zur \texttt{LandingPage} navigiert. \\
+    \hline
+    F1.2 & Wenn ich als Spieler auf der \texttt{LandingPage} meinen Namen eingebe und die Eingabe bestätige, dann werden ich auf die \texttt{HomePage} navigiert. \\
+    \hline
+    F1.3 & Bei initialisierter App. Wenn ich als Spieler die App öffne wird mir kurz die \texttt{SplashPage} angezeigt und dann werden ich zur \texttt{HomePage} navigiert. \\
+    \hline
+    F1.4 & Wenn ich als Spieler auf der \texttt{HomePage} den \enquote{Spielen!}-Knopf drücke, werde ich zur \texttt{GamePage} navigiert.\\
+    \hline
+    F1.5 & Ich als Spieler kann auf der \texttt{GamePage} Karten mit Gleichungen nach rechts oder links wischen und sie verschwinden.\\
+    \hline
+    F2.1 & Wenn ich als Spielerin eine korrekte Gleichung nach rechts wische, erhalte ich das Ergebnis der Gleichung zu meiner Punktzahl hinzu.\\
+    \hline
+    F2.2 & Wenn ich als Spielerin eine inkorrekte Gleichung nach links wische, erhalte ich das Produkt der Operanden zu meiner Punktzahl hinzu.\\
+    \hline
+    F3.1 & Wenn ich als Spieler eine korrekte Gleichung nach links wische oder eine inkorrekte Gleichung nach rechts wische, erlischt eines meiner Herzen.\\
+    \hline
+    F3.2 & Wenn ich als Spieler keine Herzen mehr habe, werde ich zur \texttt{GameOverPage} navigiert.\\
+    \hline
+    F3.3 & Wenn ich als Spieler auf der \texttt{GameOverPage} auf den \enquote{Zurück}-Knopf drücke, werde ich zur \texttt{HomePage} navigiert.\\
+    \hline
+    F3.4 & Wenn ich als Spieler auf der \texttt{GameOverPage} auf den \enquote{Nochmal}-Knopf drücke, werde ich auf die \texttt{GamePage} navigiert. Die \texttt{GamePage} ist im initialen Zustand.\\
+    \hline
+    F4.1 & Mir als Spielerin wird auf der \texttt{HomePage} meine höchste erreichte Punktzahl angezeigt.\\
+    \hline
+    F5.1 & Wenn ich als Spieler auf den \enquote{Punkte}-Knopf drücke, werde ich zur \texttt{HighscoreView} navigiert. Die \texttt{HighscoreView} zeigt alle meine vergangenen Punktestände in absteigender Reihenfolge zusammen mit meinem Namen an.\\
+    \hline
+  \end{longtabu}
+  \caption{Testroutinen für alle Features}\label{tab:test-routines}
+\end{table}
 
 Es ist anzumerken, dass sich zum Ende des Projektes immer noch ein Fehler im Programm befindet, welcher ab und zu scheinbar zufällig auftritt und verhindert, dass gewischte Karten auf der \texttt{GamePage} auch verschwinden.
 Sollte dieser Fehler auftreten, so muss der Spieldurchlauf durch eine Rückwärtsnavigation und erneutes Drücken auf \enquote{Spielen!} neu gestartet werden.
