@@ -31,13 +31,17 @@
     {
       "name": "bibtex",
       "command": "bibtex",
-      "args": ["%DOCFILE%"],
+      "args": [
+        "%DOCFILE%"
+      ],
       "env": {}
     },
     {
       "name": "biber",
       "command": "biber",
-      "args": ["%DOCFILE%"],
+      "args": [
+        "%DOCFILE%"
+      ],
       "env": {}
     }
   ],
@@ -59,6 +63,11 @@
     }
   ],
   "cSpell.words": [
-    "microservices"
-  ]
+    "Gamification",
+    "microservices",
+    "Multiplikationsaufgaben",
+    "Multiplikationsgleichungen",
+    "wischbaren"
+  ],
+  "cSpell.language": "de-DE,en"
 }

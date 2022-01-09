@@ -67,9 +67,11 @@
 \usepackage{wrapfig}
 \usepackage[font=small,labelfont=bf]{caption}
 \usepackage{float}
+\usepackage{subcaption} % for sub-figures
 
 % Tables
-\usepackage{tabu}
+\usepackage{longtable}[=v4.13] % fix version for tabu compatibility
+\usepackage{tabu} % outdated by now
 
 % Misc
 \usepackage[section]{placeins} % Prevent floats from going over section headings
